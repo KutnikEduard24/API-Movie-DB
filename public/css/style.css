@@ -1,0 +1,215 @@
+body {
+    width: 100%;
+    background: url("../res/star-wars.jpg");
+}
+
+.row {
+    margin: 0;
+}
+
+#top {
+    background: #1a001a;
+}
+
+#logo {
+    margin-left: 5rem;
+}
+
+#hour {
+    font-size: 1.5rem;
+    color: antiquewhite;
+}
+
+#more {
+    display: none;
+}
+
+h1 {
+    font-size: 3.5rem;
+    padding-top: 3rem;
+    color: antiquewhite;
+}
+
+hr {
+    margin: 0;
+    border: 2px solid antiquewhite;
+}
+
+.searchTitle {
+    text-align: center;
+    text-shadow: 3px 3px royalblue;
+}
+
+.header {
+    margin-top: 40px;
+    height: 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    margin-bottom: 100px;
+}
+
+.search-field {
+    height: 50px;
+    padding: 10px;
+}
+
+.title {
+    width: 400px;
+}
+
+.year {
+    width: 400px;
+}
+
+.genre {
+    width: 400px;
+}
+
+.search-btn {
+    height: 50px;
+    width: 150px;
+    background: #f44336;
+    border: 1px solid black;
+}
+
+.search-btn:hover {
+    background: #bb0d00;
+    cursor: pointer;
+}
+
+.form-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 50px;
+    border-radius: 1%;
+}
+
+.trading {
+    text-align: center;
+}
+
+.movie-img {
+    border: 3px solid white;
+}
+
+p {
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: 1px;
+}
+
+span {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+
+
+/*----------------------------Footer--------------------------------*/
+
+footer {
+    height: 50px;
+    background: black;
+}
+
+footer p {
+    color: #999;
+    line-height: 25px;
+}
+
+footer .h2 .h3 {
+    color: #fff;
+}
+
+footer .h2 {
+    font-size: 18px;
+}
+
+.footer-top {
+    margin-top: 10rem;
+    background: #111;
+    padding: 80px 0;
+}
+
+.segment-one h3 {
+    font-family: monospace;
+    color: #fff;
+    letter-spacing: 3px;
+    margin: 10px 0;
+}
+
+.segment-two h2 {
+    color: #fff;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+.segment-two h2::before {
+    content: '|';
+    color: #c65039;
+    padding-right: 10px;
+}
+
+.segment-two ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.segment-two ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    line-height: 40px;
+}
+
+.segment-two ul li a {
+    color: #999;
+    text-decoration: none;
+}
+
+.segment-three h2 {
+    color: #fff;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+.segment-three h2::before {
+    content: '|';
+    color: #c65039;
+    padding-right: 10px;
+}
+
+.segment-three a {
+    background: #494848;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.segment-three a i {
+    font-size: 20px;
+    color: #999;
+    padding: 10px 12px;
+}
+
+.segment-four h2 {
+    color: #fff;
+    font-family: monospace;
+}
+
+.segment-four h2::before {
+    content: '|';
+    color: #c65039;
+    padding-right: 10px;
+}
+
+.segment-four form input[type=submit] {
+    background: #c65039;
+    border: none;
+    padding: 3px 15px;
+    color: #fff;
+    margin-top: 5px;
+    text-transform: uppercase;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title> MovieDB Reservation Service </title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</header>
+
+<body>
+    <section id="top">
+        <div class="row">
+            <div class="col-lg-5 col-sm-6">
+                <img id="logo" src="../res/logo.png">
+            </div>
+
+            <div class="d-none d-lg-block col-lg-6">
+                <h1> Reservation Service </h1>
+                <div id="hour"></div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <hr>
+
+    <section id="search">
+
+        <h1 class="searchTitle mb-5">Find a movie</h1>
+
+        <div class="header">
+            <form action="/results" method="GET">
+                <input class="search-field title" name="search" type="text" placeholder="title...">
+                <input class="btn btn-lg btn-danger" type="submit">
+            </form>
+        </div>
+    </section>
+
+
+
+    <section class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-sm-12 d-flex justify-content-center pl-5 order-1 mb-4">
+                <p><span>Interstellar</span> is a 2014 epic science fiction film directed, co-written and co-produced by Christopher Nolan. It stars Matthew McConaughey, Anne Hathaway, Jessica Chastain, Bill Irwin, Ellen Burstyn, Matt Damon, and Michael
+                    Caine. Set in a dystopian future where humanity is struggling to survive, the film follows a group of astronauts who travel through a wormhole near Saturn in search of a new home for humanity.
+                </p>
+            </div>
+            <div class="col-lg-6 col-sm-12 d-flex justify-content-center order-2">
+                <img src="../res/interstelar.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1 class="trading">Best trading movies </h1>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 mt-5 d-flex justify-content-center ">
+                <img class="movie-img" src="../res/movie1.jpg">
+            </div>
+            <div class="col-lg-3 col-sm-6 mt-5 d-flex justify-content-center ">
+                <img class="movie-img" src="../res/movie2.jpg">
+            </div>
+            <div class="col-lg-3 col-sm-6 mt-5 d-flex justify-content-center ">
+                <img class="movie-img" src="../res/movie3.jpg">
+            </div>
+            <div class="col-lg-3 col-sm-6 mt-5 d-flex justify-content-center ">
+                <img class="movie-img" src="../res/movie4.jpg">
+            </div>
+        </div>
+        <span id="more">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 mt-5 d-flex justify-content-center ">
+                    <img class="movie-img" src="../res/movie5.jpg">
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-5 d-flex justify-content-center ">
+                    <img class="movie-img" src="../res/movie6.jpg">
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-5 d-flex justify-content-center ">
+                    <img class="movie-img" src="../res/movie7.jpg">
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-5 d-flex justify-content-center ">
+                    <img class="movie-img" src="../res/movie8.jpg">
+                </div>
+                <span id="showImg"></span>
+        </div>
+        </span>
+        <div class="text-center">
+            <button onclick="myFunction()" id="myBtn" class="btn btn-danger btn-lg mt-5 text-center">Show More</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12 segment-one">
+                        <h3>Divinector</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo tempore laboriosam fugiat iure veritatis doloremque nis cum similique!</p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 segment-two">
+                        <h2>Divinector</h2>
+                        <ul>
+                            <li><a href="#">Event</a></li>
+                            <li><a href="#">Event</a></li>
+                            <li><a href="#">Event</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 segment-three ">
+                        <h2>Follow Us</h2>
+                        <p>Please Follow us on our Social media Profile to keep updated.</p>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 segment-four">
+                        <h2>Our Newsletter</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, distinctio tempora assumenda reiciendis hic aperiam alias </p>
+                        <form action="">
+                            <input type="email">
+                            <input type="submit" value="subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('hour').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }; // add zero in front of numbers < 10
+            return i;
+        }
+
+        function myFunction() {
+            var moreImg = document.getElementById("more");
+            var btn = document.getElementById("myBtn");
+            var show = document.getElementById("showImg")
+
+            if (show.style.display === "none") {
+                show.style.display = "inline";
+                btn.innerHTML = "Show more";
+                moreImg.style.display = "none";
+
+            } else {
+                show.style.display = "none";
+                btn.innerHTML = "Show less";
+                moreImg.style.display = "inline";
+            }
+        }
+    </script>
+    </head>
+
+    <body onload="startTime()">
+
+
+    </body>
+
+
+</html>
